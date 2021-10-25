@@ -185,7 +185,7 @@ a {
   position: fixed;
   top: 180px;
   left: 0;
-  background-color: #f58ec8;
+  background-color: #203044;
   width: 100vw;
   height: calc(100vh - 180px);
   z-index: 2705;
@@ -209,8 +209,10 @@ a {
   padding-bottom: 50px;
 }
 .header .menu ul li a {
-  color: #203044;
+  color: #ffffff;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #f58ec8;
   font-size: 40px;
 }
 
@@ -790,7 +792,12 @@ nav li a:hover::before {
   }
 
   h1 {
-    font-size: 80px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 20px;
   }
 
   .description__main {
@@ -810,10 +817,12 @@ nav li a:hover::before {
     z-index: 12;
   }
   .images__desc .circle {
+    margin-left: -50px;
     height: 60vw;
     width: 60vw;
-    top: 19vw;
-    left: 8vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .case {
@@ -834,6 +843,30 @@ nav li a:hover::before {
     line-height: 70px;
   }
 
+  .sectors__imgs * {
+    opacity: 0.05;
+  }
+  .sectors__imgs .first {
+    top: 30%;
+    left: -10%;
+    z-index: 3;
+    transform: none;
+    height: 200px;
+  }
+  .sectors__imgs .second {
+    top: 70%;
+    right: -5%;
+    z-index: 3;
+    transform: rotate(-45deg);
+    height: 100px;
+  }
+  .sectors__imgs .third {
+    top: 80px;
+    right: 0%;
+    z-index: 3;
+    transform: rotate(-15deg);
+  }
+
   .contact {
     padding: 0px 30px 0px 40vw;
   }
@@ -850,7 +883,6 @@ nav li a:hover::before {
 }
 @media only screen and (max-width: 1024px) {
   .header {
-    position: fixed;
     z-index: 23;
     background-color: #203044;
   }
@@ -1032,7 +1064,7 @@ nav li a:hover::before {
   }
 
   h1 {
-    font-size: 60px;
+    font-size: 50px;
     line-height: 80px;
   }
 

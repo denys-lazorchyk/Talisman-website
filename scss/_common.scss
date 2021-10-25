@@ -65,7 +65,7 @@ a {
 
 	.menu {
 		@include absoluteDataTop(180px, 0, fixed);
-		background-color: $color_pink;
+		background-color: $color_blue;
 		width: 100vw;
 		height: calc(100vh - 180px);
 		z-index: 2705;
@@ -87,8 +87,10 @@ a {
 				padding-bottom: 50px;
 
 				a {
-					color: $color_blue;
+					color: $color_white;
 					text-transform: uppercase;
+					text-decoration: underline;
+					text-decoration-color: $color_pink;
 					font-size: 40px;
 				}
 			}
