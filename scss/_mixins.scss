@@ -1,0 +1,85 @@
+@mixin clear() {
+	*zoom: 1;
+	&:after {
+		display: table;
+		content: "";
+		clear: both;
+	}
+}
+
+@mixin justify() {
+	text-align: justify;
+	line-height: 0;
+	font-size: 1px;
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 0;
+		visibility: hidden;
+		overflow: hidden;
+	}
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin media($width) {
+	@media only screen and (max-width: $width + "px") {
+		@content;
+	}
+}
+
+@mixin placeholder() {
+	&:-ms-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
+@mixin basicFlex($justify: center, $direction: row) {
+	display: flex;
+	align-items: center;
+	justify-content: $justify;
+	flex-direction: $direction;
+}
+
+@mixin absoluteDataTop($top, $left, $position: absolute) {
+	position: $position;
+	top: $top;
+	left: $left;
+}
+
+@mixin absoluteDataBottom($bottom, $left) {
+	position: absolute;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin imagesPositioningTopLeft($top, $left, $zIndex: 3, $transform: none) {
+	top: $top;
+	left: $left;
+	z-index: $zIndex;
+	transform: $transform;
+}
+
+@mixin imagesPositioningTopRight($top, $right, $zIndex: 3, $transform: none) {
+	top: $top;
+	right: $right;
+	z-index: $zIndex;
+	transform: $transform;
+}

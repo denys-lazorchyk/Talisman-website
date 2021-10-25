@@ -1,0 +1,9 @@
+DONE:
+add smooth scrolling
+relocate and rename pics
+responsiveness
+add burger menu
+(transform main menu to fixed, hide ul, add burger, 
+whcih on click will toogle class activbe and show/hode fixed menu)
+
+TO DO:
